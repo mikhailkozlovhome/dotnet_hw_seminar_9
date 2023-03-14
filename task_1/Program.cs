@@ -22,11 +22,16 @@ void ShowEvenNumbers (int numberFrom, int numberTo)
         return;
     }
 
-    ShowEvenNumbers(numberFrom, numberTo - 1);
+    
     
     if (numberTo %2 ==0)
     {
+        ShowEvenNumbers(numberFrom, numberTo - 2);
         System.Console.Write($"{numberTo} ");
+    }
+    else
+    {
+        ShowEvenNumbers(numberFrom, numberTo - 1);
     }
 }
 
