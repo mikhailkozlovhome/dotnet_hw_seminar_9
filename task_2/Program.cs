@@ -17,16 +17,16 @@ int inputInt(string msg)
 }
 
 
-int GetEvenNumbersSum (int numberFrom, int numberTo)
+int GetNumbersSum (int numberFrom, int numberTo)
 {
     if (numberTo < numberFrom)
     {
         return 0;
     }
-    return numberTo + GetEvenNumbersSum(numberFrom, numberTo - 1);
+    return numberTo + GetNumbersSum(numberFrom, numberTo - 1);
 }
 
 int m = inputInt("Введите первое число");
 int n = inputInt("Введите второе число");
 
-System.Console.WriteLine($"Сумма натуральных элементов в промежутке от {m} до {n} равна {GetEvenNumbersSum(m, n)}");
+System.Console.WriteLine($"Сумма натуральных элементов в промежутке от {m} до {n} равна {GetNumbersSum(m, n)}");
